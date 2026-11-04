@@ -127,6 +127,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3876300266550191699, guid: 43dc9d5106382a94abf94748e66fdf19, type: 3}
+      propertyPath: _divideEffect
+      value: 
+      objectReference: {fileID: 2951384164144541589, guid: 73205bb5393595244aade970df456815, type: 3}
+    - target: {fileID: 3876300266550191699, guid: 43dc9d5106382a94abf94748e66fdf19, type: 3}
+      propertyPath: _explosionEffect
+      value: 
+      objectReference: {fileID: 6349760832585048504, guid: ca51271aebb0d904e9d0a283353cc21e, type: 3}
     - target: {fileID: 4236659605813308009, guid: 43dc9d5106382a94abf94748e66fdf19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -167,9 +175,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4639641036751670959, guid: 43dc9d5106382a94abf94748e66fdf19, type: 3}
+      propertyPath: _radius
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5461173265545529914, guid: 43dc9d5106382a94abf94748e66fdf19, type: 3}
       propertyPath: m_Name
-      value: DivideManager
+      value: DivideHandler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

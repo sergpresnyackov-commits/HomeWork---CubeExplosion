@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1074675771239089123}
   - component: {fileID: 4639641036751670959}
   - component: {fileID: 3910035981794771954}
+  - component: {fileID: 3876300266550191699}
   m_Layer: 0
   m_Name: DivideManager
   m_TagString: Untagged
@@ -90,8 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79b81224301df249a3996360baeaade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DivideDecider
-  ChanceReduceDivider: 2
+  _chanceReduceDivider: 2
   _startDivideChance: 100
+  _alwaysAllowDivide: 1
 --- !u!114 &1553627830950786413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f789c758467f14bba16696bbbffacf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DivideSpawner
+  _minChildrenToSpawn: 2
+  _maxChildrenToSpawn: 6
 --- !u!114 &7306409225910928806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971e1707c6c50cb4bb6b90c3e649c511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScalerHandler
-  ScaleMultiplier: 0.5
+  _scaleMultiplier: 0.5
 --- !u!114 &4639641036751670959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,10 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf5ad85d3b12cb4fbf2206700bedfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExplosionHandler
-  _explosionRadius: 1
-  _explosionOffset: 1
-  _explosionForce: 1
-  _explosionUpwardModifier: 1
+  _radius: 10
+  _offset: 1
+  _force: 10
+  _upwardsModifier: 2
 --- !u!114 &3910035981794771954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +175,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da65f9a6a7fc7cb4b837ebd9c611c218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DivideManager
+--- !u!114 &3876300266550191699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5461173265545529914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a8b6be4f9225f499d89d28d58ae5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DivideEffectSpawner
+  _divideEffect: {fileID: 2951384164144541589, guid: 73205bb5393595244aade970df456815, type: 3}
+  _explosionEffect: {fileID: 6349760832585048504, guid: ca51271aebb0d904e9d0a283353cc21e, type: 3}
